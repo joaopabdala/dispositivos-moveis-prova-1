@@ -3,7 +3,11 @@ import { router } from "expo-router";
 import { Button, StyleSheet } from "react-native";
 import ImageButton from "./ImageButton";
 
-export default function MenuButton({ context }) {
+type MenuButtonProps = {
+  context: "list" | "about"; 
+};
+
+export default function MenuButton({ context  }:MenuButtonProps) {
   const { showActionSheetWithOptions } = useActionSheet();
 
   const onPress = () => {
@@ -29,6 +33,9 @@ export default function MenuButton({ context }) {
               router.replace("/about");
               break;
             case 1:
+              if(router.canDismiss()){
+                router.dismissAll()
+              }
               router.replace("/");
               break;
           }

@@ -8,26 +8,17 @@ export default function Page() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const [isLogged, setIsLogged] = useState(false);
   const [error, setError] = useState("");
 
   const login = () => {
     if (username === "fulano" && password === "123") {
-      setIsLogged(true);
-      setError(""); // Limpa mensagens de erro anteriores
-      router.replace("/list"); // Redireciona diretamente
+      setError("");
+      router.replace("/list");
     } else {
-      setIsLogged(false);
-      setError("Login inválido"); // Define mensagem de erro
+      setError("Login inválido");
     }
   };
 
-  // setIsLogged(true)
-
-  // if(isLogged == true){
-  //   router.replace('components/list'); // Redireciona diretamente
-
-  // }
 
   return (
     <ActionSheetProvider>
@@ -78,7 +69,7 @@ const styles = StyleSheet.create({
   input: {
     borderBlockColor: "black",
     borderWidth: 1,
-    // padding: 10
+    padding: 10
   },
   error: {
     color: "red",
