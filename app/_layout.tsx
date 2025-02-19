@@ -15,7 +15,7 @@ export default function Layout() {
             name="list"
             options={{
               title: 'Listagem',
-              headerRight: () => <MenuButton context="list"/>,
+              headerRight: () => <MenuButton  context="list"/>,
             }}
           />
 

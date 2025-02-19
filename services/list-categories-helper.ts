@@ -1,4 +1,4 @@
-  export type Passenger = {
+ export type Passenger = {
     id: number;
     passenger_name: string;
     passenger_avatar: string;
@@ -27,6 +27,5 @@ export default function listCategoriesHelper(data: Passenger[]) {
       category: `${country} (${countryMap[country].length} passageiros)`,
       data: countryMap[country],
     }));
-
   return groupedData;
 }

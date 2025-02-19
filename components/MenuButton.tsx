@@ -50,7 +50,8 @@ export default function MenuButton({ context  }:MenuButtonProps) {
     );
   };
 
-  return <ImageButton 
+  return <ImageButton
+    testID="menu-button" 
     style={styles.menu}
     image={require("../assets/hamburguer-menu.png")} 
     onPress={onPress} 
@@ -60,6 +61,8 @@ export default function MenuButton({ context  }:MenuButtonProps) {
 const styles = StyleSheet.create({
     menu:{
         width: 20,
-        height:20
+        height:20,
+        color: "red",
+        backgroundColor: "red"
     }
 })

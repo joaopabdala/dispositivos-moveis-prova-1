@@ -9,7 +9,7 @@ export default function about() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>João Paulo Abdala</Text>
-      <Button title="github" onPress={openLink}></Button>
+      <Button testID="git-button" title="github" onPress={openLink}></Button>
     </View>
   )
 }

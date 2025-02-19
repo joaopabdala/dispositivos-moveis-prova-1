@@ -26,16 +26,19 @@ export default function Page() {
         <Image
           style={styles.logo}
           source={require("../assets/logo.png")}
+          testID="logo-image"
         ></Image>
 
         <View>
           <TextInput
+            testID="input-username"
             style={styles.input}
             placeholder="username"
             value={username}
             onChangeText={setUsername}
           ></TextInput>
           <TextInput
+            testID="input-password"
             style={styles.input}
             placeholder="password"
             value={password}
@@ -44,6 +47,7 @@ export default function Page() {
           ></TextInput>
           {error ? <Text style={styles.error}>{error}</Text> : null}
           <ImageButton
+            testID="Login"
             style={styles.logo}
             image={require("../assets/logo.png")}
             onPress={login}

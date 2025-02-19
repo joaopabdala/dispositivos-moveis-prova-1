@@ -1,0 +1,19 @@
+appId: com.prova-2.app
+---
+- openLink: exp://127.0.0.1:8081
+- tapOn:
+    id: input-username
+- inputText: "fulano"
+- tapOn:
+    id: input-password
+- inputText: "123"
+- tapOn:
+    id: Login
+- assertVisible: "Listagem"
+- tapOn:
+    id: "menu-button"
+- tapOn: "About"
+- tapOn:
+    id: "git-button"
+- assertVisible:
+    id: "com.android.chrome:id/url_bar"

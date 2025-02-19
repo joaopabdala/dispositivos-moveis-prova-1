@@ -4,11 +4,13 @@ import React from 'react'
 type ImageButtonProps = {
   onPress: ()  => void,
   image: ImageSourcePropType,
-  style: ImageStyle
+  style: ImageStyle,
+  testID?: string 
 }
 
 
 export default function ImageButton({
+  testID,
   onPress,
   image,
   style
@@ -16,6 +18,7 @@ export default function ImageButton({
   return (
     <View>
       <TouchableOpacity
+        testID={testID}
         onPress={onPress}
       >
 
